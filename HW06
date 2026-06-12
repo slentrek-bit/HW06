@@ -1,0 +1,39 @@
+/*
+Program Name: Stock Commission
+Purpose: To Calclulate Stock Prices Based on User Input
+Author: Shaun Entrekin
+Date Last Modified: 6/1/2026
+*/
+
+#include <iostream>
+using namespace std;
+
+int main () {
+    double pricepershare, commissions;
+    int numberofshares;
+    double stockamount, commissionamount, totalamountpaid;
+
+    cout << "Enter price per share: ";
+    cin >> pricepershare;
+
+    cout << "Enter number of shares you want to buy: ";
+    cin >> numberofshares;
+
+    cout << "Enter commissions in percent: ";
+    cin >> commissions;
+
+    stockamount = pricepershare * numberofshares;
+    commissionamount = stockamount * (commissions / 100);
+    totalamountpaid = stockamount + commissionamount;
+
+    cout << "The amount paid for the stock alone (without the commission): $"
+         << stockamount << endl;
+
+    cout << "The amount of the commission: "
+         << commissions << "%" << endl;
+
+    cout << "The total amount paid (for the stock plus the commission): $"
+         << totalamountpaid << endl;
+
+    return 0;
+}
